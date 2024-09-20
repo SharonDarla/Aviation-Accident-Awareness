@@ -1,0 +1,365 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/492651434/photo/aircraft-failure-on-air.jpg?s=612x612&w=0&k=20&c=h0JBHGbndjoNlGR2QJ_U36ip79YtqWd7QsYozmruJxU=');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+header {
+    background-color: rgba(4, 12, 61, 0.945);
+    padding: 10px 0;
+    text-align: center;
+}
+
+#title {
+    font-size: 24px; /* Adjust font size as per your preference */
+    margin: 0; /* Remove default margin */
+}
+nav {
+    background-color: rgba(234, 213, 32, 0.6);
+    padding: 3px 0;
+    text-align: center;
+    border-bottom: 0px solid #fff;
+}
+
+nav a {
+    display: inline-block; /* Ensures each link behaves like a block */
+    padding: 7px 20px; /* Adjust padding as needed for spacing around the icon */
+    border: 2px solid #111112; /* Example border styling - change color and size as desired */
+    border-radius: 5px; /* Optional: Adds rounded corners to the border */
+    margin: 0 5px; /* Adjust margin to create spacing between links */
+    text-decoration: none; /* Removes underline from links */
+    color: #0c0c0d; /* Adjust color of the link text */
+}
+
+nav a:hover {
+    background-color: #233e5b; /* Change background color on hover */
+    color: #fff; /* Adjust text color on hover */
+}
+
+/* Additional styles for image container and image */
+.image-container {
+    text-align: center; /* Center image horizontally */
+    margin-top: 0px; /* Adjust as needed */
+    margin-right: 0px;
+
+}
+
+.image-container img {
+    width: 100%; /* Make image fill its container */
+    height: 100px; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed its natural size */
+    margin-right: 0px;
+    
+}
+
+section {
+    padding: 30px;
+    background-color: rgba(205, 205, 200, 0.3);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* colour changes for headings */
+
+#overview h2 {
+    color: #ffcc00; 
+}
+
+#prevention h2 {
+    color: #ffcc00; 
+}
+
+#causes h2 {
+    color: #ffcc00 ; 
+}
+
+/* Heading for Contact Us section */
+#contact-us h2 {
+    color: #ffcc00; 
+}
+
+/* CSS for causes section */
+#causes {
+padding: 30px;
+background-color: rgba(205, 200, 200, 0.3);
+margin: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+animation: fadeInUp 1s ease;
+}
+
+.causes-container {
+display: flex;
+flex-wrap: wrap;
+}
+
+.cause-item {
+display: flex;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.image-container {
+flex: 1;
+margin-right: 20px;
+}
+
+.text-container {
+flex: 2;
+max-width: 60%;
+}
+
+.cause-image {
+max-width: 100%;
+height: auto;
+}
+
+.link-box {
+display: inline-block;
+padding: 10px 20px;
+margin: 10px 0;
+border-radius: 5px;
+background-color: rgba(0, 0, 0, 0.6);
+text-decoration: none;
+color: #fff;
+transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.link-box:hover {
+background-color: #ff0;
+color: #000;
+transform: scale(1.05);
+}
+
+.document-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #50aaea;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.document-link:hover {
+    background-color: #03386f;
+}
+
+
+#prevention {
+    padding: 60px;
+    background-color: rgba(205, 200, 200, 0.3);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+    
+    .prevention-container {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .prevention-item {
+    display: flex;
+    width : 100%;
+    margin-bottom: 20px;
+    }
+    
+    .image-container {
+    flex: 1;
+    margin-right: 20px;
+    }
+    
+    .text-container {
+    flex: 2;
+    max-width: 60%;
+    }
+    
+    .prevention-image {
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .link-box {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .link-box:hover {
+    background-color: #ff0;
+    color: #000;
+    transform: scale(1.05);
+    }
+
+    .prevention-section {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    }
+    
+    .prevention-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; /* Adjust margin between items */
+    }
+    
+    .image-container {
+        flex: 0 0 40%; /* Adjust width of image container */
+        margin-right: 20px; /* Margin between image and text */
+    }
+    
+    .image-container img {
+        max-width: 100%; /* Ensure image doesn't exceed container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .text-container {
+        flex: 1 1 60%; /* Adjust width of text container */
+    }
+    
+    .text-container h2 {
+        margin-top: 0; /* Remove default margin */
+    }
+    
+    .text-container p {
+        margin-bottom: 0; /* Remove default margin */
+    }
+    
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+.contact-us {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.contact-us p {
+    color: #fff;
+    margin: 10px 0;
+}
+.contact-us p:first-child {
+    margin-top: 0;
+}
+.link-box {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.link-box:hover {
+    background-color: #ff0;
+    color: #000;
+    transform: scale(1.05);
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.chat-body {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+.chat-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.chat-send {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.chat-message {
+    margin-bottom: 10px;
+}
+.chat-message.bot {
+    color: #007bff;
+}
+.chat-message.user {
+    text-align: right;
+    color: #555;
+}
+.chatbot-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
