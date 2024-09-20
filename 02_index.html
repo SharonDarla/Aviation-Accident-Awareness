@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Accident Awareness</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Aviation Accident Awareness</h1>
+
+    </header>
+
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#causes">Causes</a>
+        <a href="#prevention">Prevention</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <div class="image-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Fna_3x-gcm_rev.jpg" alt="Aviation Accidents image"style="max-width: 100%; height: 250px;">
+    </div>
+    
+    <h1>User List</h1>
+    <button onclick="fetchUsers()">Load Users</button>
+    <ul id="user-list"></ul>
+
+    <script>
+        function fetchUsers() {
+            fetch('/get_users')
+                .then(response => response.json())
+                .then(data => {
+                    const userList = document.getElementById('user-list');
+                    userList.innerHTML = ''; // Clear existing list
+                    data.forEach(user => {
+                        const li = document.createElement('li');
+                        li.textContent = `${user.name} (${user.email})`;
+                        userList.appendChild(li);
+                    });
+                });
+        }
+    </script>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Aviation accidents are tragic events that can result in loss of life, injuries, and 
+            damage to property. Increasing awareness about aviation safety 
+            is crucial to prevent such accidents.They pose significant risks, impacting lives, property, and industry. Prevention efforts 
+            focus on rigorous safety protocols, training, and technological advancements.</p>
+        <a href="https://youtu.be/9kxxd3bDS7c" class="link-box">Watch Video <span class="info-text">for more info</span></a>
+    </section>
+
+    <section id="causes">
+        <h2>Causes</h2>
+        <div class="causes-container">
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://www.alliance-training.com/wp-content/uploads/2018/12/The-Most-Common-Pilot-Errors-to-Avoid-5c000f10db8a5.jpg" alt="Common Pilot Errors" class="cause-image"style="max-width: 90%; height: auto;">
+                </div>
+                <div class="text-container">
+                    <h3>Pilot Error</h3>
+                    <p>Pilot error refers to mistakes made by the pilot during flight operations. This can include errors in decision-making, navigation, mismanagement of aircraft systems, failure to follow procedures, and spatial disorientation.</p>
+                    <br>
+                    <a href="https://www.researchgate.net/profile/Guohua-Li-7/publication/12136068_Factors_associated_with_pilot_error_in_aviation_crashes/links/5407268b0cf2c48563b29739/Factors-associated-with-pilot-error-in-aviation-crashes.pdf" target="_blank" class="document-link">Read More (PDF)</a>
+                </div>
+            </div>
+    
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://i.ytimg.com/vi/Zg7YvOTyNWc/maxresdefault.jpg" alt="Mechanical errors" class="cause-image"style="max-width: 90%; height: auto;">
+                </div>
+                <div class="text-container">
+                    <h3>Mechanical Failure</h3>
+                    <p>Mechanical failures involve malfunctions or failures of aircraft components or systems, such as engine failures, electrical system malfunctions, hydraulic system failures, and structural failures.</p>
+                    <br>
+                    <a href="https://www.shotpeener.com/library/pdf/1974002.pdf" target="_blank" class="document-link">Read More (PDF)</a>
+                </div>
+            </div>
+    
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvFT4yFh0pmV8et_plOFRTyBqUdy7cuivFXw&s" alt="Weather conditions affects" class="cause-image"style="max-width: 90%; height: auto;">
+                </div>
+                <div class="text-container">
+                    <h3>Weather Conditions</h3>
+                    <p>Weather conditions play a significant role in aviation safety, affecting visibility, aircraft performance, and control. Hazards include fog, thunderstorms, icing, turbulence, strong winds, reduced visibility, and low ceilings.</p>
+                    <br>
+                    <a href="https://www.transportation.gov/sites/dot.gov/files/docs/kulesa_Weather_Aviation.pdf" target="_blank" class="document-link">Read More (PDF)</a>
+                </div>
+            </div>
+    
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://cdn.britannica.com/27/4727-004-07514F34/Aircraft-landing-sequence.jpg?w=300&h=169&c=crop" alt="Air Traffic control errors" class="cause-image"style="max-width: 90%; height: auto;">
+                </div>
+                <div class="text-container">
+                    <h3>Air Traffic Control Errors</h3>
+                    <p>Errors by air traffic controllers can contribute to accidents through miscommunication or incorrect instructions, such as misinterpretation of radar data, improper separation of aircraft, and incorrect guidance.</p>
+                    <br>
+                    <a href="https://acta-avionica.tuke.sk/ojs/index.php/aavionica/article/viewFile/315/315" target="_blank" class="document-link">Read More (PDF)</a>
+                </div>
+            </div>
+    
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOVJZ5CBeNclbJtC_tSpnZAhP8dxqB7M1QXz5-kwxsMqJpfekEWBbWeWNpYt8HruslQokS4SW7H47NBILrNsfTbWBFo1aIs3nFzDvHDxj4SK0B35kmHVTSD5B7gEeV6C2G0IDb5W1RC9k/s1600/001.JPG" alt="Human factors" class="cause-image"style="max-width: 90%; height: 250px;">
+                </div>
+                <div class="text-container">
+                    <h3>Human Factors</h3>
+                    <p>Human factors encompass psychological, social, and physiological factors affecting human performance in aviation. Examples include fatigue, stress, inadequate training, poor crew coordination, distractions, and complacency.</p>
+                    <br>
+                    <a href="https://www.faasafety.gov/files/gslac/courses/content/258/1097/AMT_Handbook_Addendum_Human_Factors.pdf" target="_blank" class="document-link">Read More (PDF)</a>
+                </div>
+            </div>
+        </div>
+        <a href="https://youtu.be/h3AWPhslRg4" class="link-box">Watch Video <span class="info-text">for more info</span></a>
+    </section>
+    
+    
+    <section id="prevention">
+        <h2>Prevention</h2>
+        <div class="prevention-container">
+            <div class="cause-item">
+                <div class="image-container">
+                    <img src="https://rowman.com/L/16/414/9781641433624.jpg" alt="Safety Management Systems (SMS)"style="max-width: 90%; height: 250px;">
+                </div>
+
+                <div class="text-container">
+                    <h3>Safety Management Systems (SMS)</h3>
+                    <p><strong>Implementation:</strong> Airlines and aviation organizations should establish robust Safety Management Systems (SMS) that systematically identify, assess, and mitigate risks.
+                        <br>
+                        <br>
+                        <strong>Components:</strong> SMS includes safety policies, risk management processes, safety assurance activities (such as audits and safety reviews), and safety promotion efforts (training and communication).
+                    </p>
+                </div>
+            </div>
+    
+            <div class="prevention-item">
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLCgIC9Yorbf5gGYw4MNdGbXh5Vslvsn7QmA&s" alt="Pilot Training and Competency"style="max-width: 90%; height: 250px;">
+                </div>
+
+                <div class="text-container">
+                    <h3>Pilot Training and Competency</h3>
+                    <p><strong>Training Programs:</strong> Ensuring pilots undergo comprehensive and recurrent training programs that cover emergency procedures, decision-making under stress, and handling advanced aircraft systems.
+                        <br>
+                        <br>
+                    <strong>Simulation:</strong> Regular use of flight simulators to practice critical scenarios enhances pilot preparedness and response capabilities.</p>
+                </div>
+            </div>
+    
+            <div class="prevention-item">
+
+                <div class="image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6phbz5DKMJCG2PBcK4y07-1vxuBqnAt1B2w&s" alt="Maintenance and Inspection Standards"style="max-width: 90%; height: 250px;">
+                </div>
+
+                <div class="text-container">
+                    <h3>Maintenance and Inspection Standards</h3>
+                    <p><strong>Adherence to Standards:</strong> Strict adherence to maintenance schedules and regulatory requirements for aircraft maintenance and inspections.
+                        <br>
+                        <br>
+                    <strong>Quality Assurance:</strong> Implementing rigorous quality assurance programs to monitor and audit maintenance practices and ensure compliance with safety standards.</p>
+                </div>
+            </div>
+    
+            <div class="prevention-item">
+            
+                <div class="image-container">
+                    <img src="https://www.aeologic.com/blog/wp-content/uploads/2023/03/Aviation-Industry.jpg" alt="Technological Innovations"style="max-width: 90%; height: 250px;">
+                </div>
+
+                <div class="text-container">
+                    <h3>Technological Innovations</h3>
+                    <p><strong>Aviation Technology:</strong> Advancements in aircraft design, navigation systems, and automation technologies (e.g., autopilot systems, collision avoidance systems) improve operational safety and reduce human error.
+                        <br>
+                        <br>
+                    <strong>Data Analytics:</strong> Utilizing data analytics and predictive maintenance to identify potential safety issues before they escalate into incidents.</p>
+                </div>
+            </div>
+    
+            <div class="prevention-item">
+            
+                <div class="image-container">
+                    <img src="https://media.licdn.com/dms/image/D5622AQHGmN4Y9tOeAQ/feedshare-shrink_800/0/1702368783218?e=2147483647&v=beta&t=Gft-iAGxa6t-vSqxgY76NFjiJTlTEqIcmHGnEpRXM98" alt="Regulatory Oversight"style="max-width: 90%; height: 250px;">
+                </div>
+
+                <div class="text-container">
+                    <h3>Regulatory Oversight</h3>
+                    <br>
+                    <p><strong>Regulatory Framework:</strong> Governments and aviation authorities play a crucial role in establishing and enforcing stringent safety regulations and standards.
+                        <br>
+                        <br>
+                    <strong>Audits and Inspections:</strong> Conducting regular audits, inspections, and safety assessments of airlines, airports, and aviation service providers to ensure compliance with safety regulations.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://youtu.be/pIGkmDb0aIw" class="link-box">Watch Video <span class="info-text">for more info</span></a>
+    </section>
+    
+
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns about aviation accidents, please feel free to contact us:</p>
+        <p>Email: info@aviationaccidents.com</p>
+        <p>Phone: +91- 7013343155 </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AviationAccidents. All rights reserved.</p>
+    </footer>
+
+    <div class="chatbot-toggle" onclick="toggleChatbot()">💬</div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header" onclick="toggleChatbot()">Chat with us!</div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message...">
+            <button class="chat-send" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
